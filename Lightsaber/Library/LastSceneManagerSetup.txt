@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/lightsaberScene.unity
+- path: Assets/lightsaberScene2Player.unity
   isLoaded: 1
   isActive: 1
