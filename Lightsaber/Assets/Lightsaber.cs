@@ -12,4 +12,11 @@ public class Lightsaber : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    void OnTriggerEnter(Collider other) {
+        if (other.tag.Equals("Laser")) {
+            Rigidbody temp_rigidbody = other.GetComponent<Rigidbody>();
+            temp_rigidbody.velocity = -1 * temp_rigidbody.velocity.magnitude * temp_rigidbody.velocity;
+        }
+    }
 }

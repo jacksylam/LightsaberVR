@@ -11,7 +11,9 @@ GameObject:
   - 33: {fileID: 3343044}
   - 136: {fileID: 13669256}
   - 23: {fileID: 2357918}
-  - 54: {fileID: 5457564}
+  - 114: {fileID: 11498066}
+  - 54: {fileID: 5426956}
+  - 136: {fileID: 13604416}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -64,14 +66,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140472}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5457564
+--- !u!54 &5426956
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140472}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -79,6 +81,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11498066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ca92d730f062c4e890561612c73636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &13604416
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.50000006
+  m_Height: 1.9999996
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940695}
 --- !u!136 &13669256
 CapsuleCollider:
   m_ObjectHideFlags: 1
