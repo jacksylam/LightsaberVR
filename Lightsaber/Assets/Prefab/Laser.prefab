@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2357918}
   - 114: {fileID: 11498066}
   - 54: {fileID: 5426956}
-  - 136: {fileID: 13604416}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 140472}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.01, y: 0.02, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ca92d730f062c4e890561612c73636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &13604416
+--- !u!136 &13669256
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -101,21 +100,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.50000006
-  m_Height: 1.9999996
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940695}
---- !u!136 &13669256
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140472}
-  m_Material: {fileID: 13400000, guid: e6f8284a44130c1458d1f59009c9815d, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
   m_Radius: 0.75
-  m_Height: 3.5
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000

@@ -13,7 +13,7 @@ public class rightTrigger : MonoBehaviour {
 
 	void Update () {
 		SteamVR_Controller.Device device = SteamVR_Controller.Input ((int)trackedObj.index);
-		if(device.GetTouch(SteamVR_Controller.ButtonMask.Trigger))
+        if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
 		{
 			Debug.Log ("You have pulled the RIGHT trigger");
             MarkshmanH.GetComponent<MarksmanHController>().fireLaser();

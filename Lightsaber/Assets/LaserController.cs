@@ -12,4 +12,12 @@ public class LaserController : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void OnCollisionEnter(Collision other) {
+        Debug.Log(other.gameObject.ToString());
+        if (other.gameObject.name.Equals("Ground")) {
+            Destroy(gameObject);
+        }
+      
+    }
 }
