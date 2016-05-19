@@ -6,25 +6,27 @@ public class MarksmanHController : MonoBehaviour {
     public GameObject Laser;
     public GameObject player;
     public float Laser_Forward_force;
+    public AudioClip LaserSound;
+
+    private AudioSource audioSource;
 
 
     // Use this for initialization
     void Start() {
-        
+        audioSource = GetComponent<AudioSource>();
        
     }
 
     // Update is called once per frame
     void Update() {
-        transform.LookAt(player.transform);
-        transform.RotateAround(player.transform.position, Vector3.up, 10f * Time.deltaTime);
+        Movement();
 
         if (Input.GetKeyDown("space")) {
-            fireLaser();
+            FireLaser();
         }
     }
 
-    public void fireLaser() {
+    public void FireLaser() {
       
         
         GameObject Temporary_Bullet_Handler;
@@ -39,8 +41,13 @@ public class MarksmanHController : MonoBehaviour {
         temp_rigidbody.velocity = 1 * transform.forward * Laser_Forward_force;
 
         Destroy(Temporary_Bullet_Handler, 10.0f);
-	
+
+        audioSource.PlayOneShot(LaserSound, 1);
     }
 
-    
+    private void Movement() {
+        transform.LookAt(player.transform);
+        transform.position = (transform.position - player.transform.position).normalized * 1 + player.transform.position;
+        transform.RotateAround(player.transform.position, Vector3.up, 10f * Time.deltaTime);
+    }
 }

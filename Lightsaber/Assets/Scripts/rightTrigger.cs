@@ -16,7 +16,7 @@ public class rightTrigger : MonoBehaviour {
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
 		{
 			Debug.Log ("You have pulled the RIGHT trigger");
-            MarkshmanH.GetComponent<MarksmanHController>().fireLaser();
+            MarkshmanH.GetComponent<MarksmanHController>().FireLaser();
 
 			
 		}
